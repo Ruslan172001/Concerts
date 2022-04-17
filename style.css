@@ -1,0 +1,495 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a{
+text-decoration: none;
+color: rgb(255, 255, 255);
+}
+ul,ol,li{
+list-style: none;
+}
+img{
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-weight: inherit;
+    font-size: inherit;
+}
+html,body{
+    height: 100%;
+    line-height: 1;
+}
+body{
+    font-family: Rubik;
+    background: linear-gradient(90deg, #FF00CC 2.74%, #333399 102.74%);
+
+    
+}
+.wrapper{
+    overflow:hidden;
+    min-height: 100%;
+}
+
+[class*="__container"]{
+    max-width: 1330px;
+    margin: 0px auto;
+    padding: 0px 15px;
+}
+/*PC*/
+@media(max-width:1330px){
+    [class*="__container"]{
+        max-width: 970px;
+    }
+}
+/*tablet*/
+@media (max-width:992px) {
+    [class*="__container"]{
+        max-width: 750px;
+    }
+}
+/*mobile*/
+@media (max-width:767px) {
+    [class*="__container"]{
+        max-width:none;
+    }
+}
+.header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    background: rgba(196, 196, 196, 0.08);
+    }
+.header__container {
+    display: flex;
+    min-height: 60px;
+    align-items: center;
+    margin: 0;
+    justify-content: space-between;
+}
+.header__items{
+display: flex;
+
+}
+.header__logo {
+margin-left: 20px;
+}
+.header__text {
+color: white;
+padding-right: 20px;
+}
+.header__button {
+
+}
+.button-green {
+width: 160px;
+height: 42px;
+border-radius: 25px;
+background-color: #23F577;
+padding: 10px 30px;
+color: black;
+}
+.main {
+
+}
+.artists {
+
+}
+.artists__container {
+    padding: 100px 15px 10px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+}
+
+.artists__content {
+margin: 0 auto;
+}
+.artists__text {
+
+}
+.artists__title {
+font-size: 30px;
+color: white;
+
+
+}
+.artists__list {
+
+}
+
+.dropbtn {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    font-family: Rubik;
+    width: 180px;
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: left;
+    
+  }
+  
+  /* Контейнер <div> - необходим для размещения выпадающего содержимого */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Выпадающее содержимое (скрыто по умолчанию) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    height: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 99;
+    overflow-y: scroll;
+  }
+  
+  /* Ссылки внутри выпадающего списка */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+  }
+  
+  /* Изменение цвета выпадающих ссылок при наведении курсора */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Показать выпадающее меню при наведении курсора */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+  .artists__card{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    width: 900px;
+    margin: 0 auto;
+    
+  }
+  
+  .card {
+    position: relative;
+    width: 210px;
+    height: 240px;
+    margin: 0 auto;
+    background: rgba(196, 196, 196, 0.08);
+    border-radius: 15px;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+    margin-top: 15px;
+    
+  }
+    .face {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      
+    }
+      .face1 {
+        box-sizing: border-box;
+        padding: 20px;
+      }
+        h2 {
+          margin: 0;
+          padding: 0;
+        }
+
+        .Date{
+          font-size: 20px;
+          background-color: #ffffff;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        .Artist{
+            margin-top: 10px;
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+        .Location{
+            margin-top: 10px;
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+        .start-end{
+            margin-top: 40px;
+            color: rgb(255, 255, 255);
+            text-align: center;  
+        }
+
+     
+      .face2 {
+        transition: 0.5s;
+      }
+        h2 {
+            font-family: Rubik;
+          margin: 0;
+          padding: 0;
+          font-size: 10em;
+          color: #fff;
+          transition: 0.5s;
+          text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          z-index: 10;
+        }
+      
+    
+  
+
+  .card:hover .face.face2 {
+    height: 20px;
+  }
+
+    h2 {
+      font-size: 2em;
+      text-align: center;
+    }
+    .card:hover .face.face2  h2{
+        display: none;
+        
+      }
+  
+
+  .card .face.face2 {
+    background-image: url(img/Imagine\ Dragons.png);
+    border-radius: 15px;
+  }
+
+  .selected__title{
+    color: #ffffff;
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+  }
+  .selected__seats {
+    text-align: center;
+  }
+  .selected__container {
+    padding: 100px 15px 10px 15px;
+    text-align: center;
+    
+  }
+  .change-seats{
+    width: 300px;
+    height: 350px;
+    background: rgba(196, 196, 196, 0.80);
+    border-radius: 20px;
+    float: left;
+    margin-left: 30px;
+    
+    
+  }
+  .change__button{
+    display: block;
+    background-color: red;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin-top: 100px;
+    text-align: center;
+    
+  }
+  .seats{
+    margin-bottom: 50px;
+    margin-top: 30px;
+    text-align: center;
+    column-count: auto;
+  }
+  .change__seats__item{
+    
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+  .seats-row{
+    margin-bottom: 10px;
+  }
+  
+  .details {
+    width: 970px;
+    height: 350px;
+    float: left;
+    margin-left: 20px;
+    background: rgba(196, 196, 196, 0.80);
+    border-radius: 30px;
+    margin-bottom: 30px;
+    
+  }
+  .details__body{
+    width: 50%;
+  
+  }
+  .details__body-info{
+  width: 50%;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  
+  
+  }
+  .details__title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .details__item {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+  .details__items {
+    width: 300px;
+    height: 30px;
+    margin-right: 20px;
+    
+    outline: none;
+    font-family: Rubik;
+    padding-left:10px;
+    margin-bottom: 10px;
+    
+    
+    
+  }
+  .details__items_1{
+    width: 70px;
+    height: 30px;
+    outline: none;
+    font-family: Rubik;
+    
+    
+    
+  }
+  .details__items_2 {
+    width: 205px;
+    height: 30px;
+    outline: none;
+    font-family: Rubik;
+    
+  }
+ 
+  .details__info {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+  }
+  .details__book {
+    
+    padding-top: 10px;
+    width: 300px;
+    height: 50px;
+    display: inline-flex;
+  }
+  .details__country{
+    display: inline-flex;
+    flex-direction: column;
+    float: left;
+    text-align: left;
+    margin-left: 20px;
+  }
+  .book__button {
+    background-color: #7e23a1;
+    padding: 15px 60px;
+    font-size: 25px;
+    flex-direction: row;
+    float: right;
+  }
+  .details__items-name{
+  text-align: left;
+  }
+  
+  .details__items-name_1{
+    display: inline-flex;
+    flex-direction: column;
+    float: left;
+    text-align: left;
+    margin-left: 20px;
+    
+    
+    }
+    .dropdown__details {
+      position: relative;
+      display: inline-block;
+    }
+    .dropbtn__details {
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      font-family: Rubik;
+      width: 300px;
+    
+      margin-top: 10px;
+      text-align: left;
+      
+    }
+    .dropdown-content__details {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      height: 300px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 100;
+      overflow-y: scroll;
+    }
+    .dropdown-content__details a{
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    /* Изменение цвета выпадающих ссылок при наведении курсора */
+    .dropdown-content__details a:hover {background-color: #ddd;}
+    
+    /* Показать выпадающее меню при наведении курсора */
+    .dropdown__details:hover .dropdown-content__details {display: block;}
+    
+    /* Изменение цвета фона кнопки раскрывающегося списка при отображении содержимого раскрывающегося списка */
+    .dropdown__details:hover .dropbtn__details {background-color: #b2e2b3;}
+   
+   .form-tickets__container{
+    padding: 100px 15px 10px 15px;
+    text-align: center;
+   }
+    .form-tickets {
+
+    }
+    .form-tickets__title {
+color: #ffffff;
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    }
+    .form {
+
+    }
